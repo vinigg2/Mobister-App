@@ -1,0 +1,55 @@
+<view data-ng-init="clock()">
+	<ion-side-menus>
+		  <!-- Center content -->
+		  <ion-side-menu-content ng-controller="ControllerMenu">
+			  <div class="bar-mobister">
+			  	<button menu-toggle="left" class="button button-icon icon ion-navicon"><div class="logo-small"><img alt="" src="img/logo-small.jpg"></div></button>
+				<button ng-click="backlogin()" class="button button-icon icon ion-log-out pull-right"></button>
+			  </div>
+			  
+			  
+			  <ion-content class="content interna">
+				<div class="list list-ponto">
+					<div class="horario-ponto" ng-repeat="horario in horarios">{{horario.time}}</div>
+				</div>
+			</ion-content>
+			  
+			  <div class="bar bar-footer">
+				<div class="horario">
+					<div id="horario-date"></div>
+				</div>
+
+				<div class="ponto">
+					<button class="button btn-default" ng-click="pontoHorario()">Bater meu ponto</button>
+				</div>
+			</div>
+		  </ion-side-menu-content>
+
+		  <!-- Left menu -->
+		  <ion-side-menu side="left">
+			  <div id="menu">
+				  <div class="profile">
+					<figure>
+						<img alt="" src="img/thumb-teste.jpg">  
+					</figure>
+
+				  </div>
+				  <ul class="list list-menu">
+					<li>
+						<i class="ion-clipboard"></i> Histórico de ponto
+					</li>
+					<li>
+						<i class="fa fa-calendar"></i> Calendário
+					</li>
+					<li>
+						<i class="fa fa-cloud-download"></i> Backup de registro
+					</li>
+					<li>
+						<i class="fa fa-bar-chart"></i> Gráfico do mês
+					</li>
+				  </ul>
+			  </div>
+		  </ion-side-menu>
+		  
+	</ion-side-menus>
+</view>
